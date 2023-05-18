@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 
 <html lang="en">
-
     <head>
         <meta charset="UTF-8">
         <meta name="author" content="Mert Tanatmis">
@@ -25,31 +24,112 @@
         </header>
         
         <main>
-            <style>
-                {
-                    "args": {}, 
-                    "headers": {
-                        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7", 
-                        "Accept-Encoding": "gzip, deflate, br", 
-                        "Accept-Language": "en-US,en;q=0.9", 
-                        "Dnt": "1", 
-                        "Host": "httpbin.org", 
-                        "Referer": "https://www.google.com/", 
-                        "Sec-Ch-Ua": "\"Google Chrome\";v=\"113\", \"Chromium\";v=\"113\", \"Not-A.Brand\";v=\"24\"", 
-                        "Sec-Ch-Ua-Mobile": "?0", 
-                        "Sec-Ch-Ua-Platform": "\"Windows\"", 
-                        "Sec-Fetch-Dest": "document", 
-                        "Sec-Fetch-Mode": "navigate", 
-                        "Sec-Fetch-Site": "cross-site", 
-                        "Upgrade-Insecure-Requests": "1", 
-                        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36", 
-                        "X-Amzn-Trace-Id": "Root=1-6463ad2d-0fccb8af2b7682264ce060ce"
-                    }, 
-                    "origin": "99.240.30.63", 
-                    "url": "https://httpbin.org/get"
-                }
-            </style>
+            <article>
+                <h2>Contact Us</h2>
+
+                <form action="https://httpbin.org/get" method="get">
+                    <!--Personal Info-->
+                    <fieldset>
+                        <legend>Personal Info</legend>
+
+                        <p>
+                            <label for="firstName">First Name*</label>
+
+                            <input type="text" name="firstName" id="firstName" required placeholder="First Name">
+                        </p>
+
+                        <p>
+                            <label for="lastName">Last Name*</label>
+
+                            <input type="text" name="lastName" id="lastName" required placeholder="Last Name">
+                        </p>
+
+                        <p>
+                            <label for="tel">Phone Number</label>
+
+                            <input type="tel" name="tel" id="tel" placeholder="123-456-7890" pattern="[0-9]{3}[0-9]{3}[0-9]{4}">
+                        </p>
+
+                        <p>
+                            <label for="birthday">Birthday</label>
+
+                            <input type="date" name="birthday" id="birthday">
+                        </p>
+                    </fieldset>
+
+                    <br>
+
+                    <!--Login Info-->
+                    <fieldset>
+                        <legend>Login Info</legend>
+
+                        <p>
+                            <label for="email">Email*</label>
+
+                            <input type="email" name="email" id="email" required placeholder="Email">
+                        </p>
+
+                        <p>
+                            <label for="password">Password*</label>
+
+                            <input type="password" name="password" id="password" required placeholder="Password">
+                        </p>
+                    </fieldset>
+
+                    <br>
+
+                    <!--Feedback/Text Area-->
+                    <fieldset>
+                        <legend>Feedback</legend>
+
+                        <p>
+                            <textarea id="feedback" name="feedback" rows="8" cols="64" placeholder="Enter your feedback here"></textarea>
+                        </p>
+                    </fieldset>
+
+                    <br>
+
+                    <!--Redio Button-->
+                    <fieldset>
+                        <legend>Newsletter</legend>
+
+                        <p>Would you like to subscribe to our newsletter?</p>
+
+                        <p>
+                            <input type="radio" name="newsletter" id="yes" value="yes">
+
+                            <label for="yes">Yes</label>
+                        </p>
+                        
+                        <p>
+                            <input type="radio" name="newsletter" id="no" value="no">
+
+                            <label for="no">No</label>
+                        </p>
+                    </fieldset>
+
+                    <!--Option Group-->
+                    <fieldset>
+                        <legend>Size</legend>
+
+                        <select name="size" id="size">
+                            <option value="xs">XS</option>
+                            <option value="s">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                            <option value="XXL">XXL</option>
+                        </select>
+                    </fieldset>
+
+                    <br>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </article>
         </main>
+
+        <br>
 
         <footer>
             <a href="#">Go to Top</a>
